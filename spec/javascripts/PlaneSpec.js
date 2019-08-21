@@ -1,3 +1,5 @@
+'use strict';
+
 describe('Plane', function () {
 
     var plane;
@@ -8,5 +10,11 @@ describe('Plane', function () {
     it('responds to land', function () {
         plane.land();
         expect(plane.isFlying()).toBe(false);
+    });
+
+    it('responds to takeoff', function () {
+        plane.land();
+        plane.takeoff();
+        expect(plane.isFlying()).toBe(true);
     });
 });
